@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white w-full quiz-container rounded-2xl p-6 md:p-8">
+        <h1 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-2">Tech & Science Quiz</h1>
+        <div class="h-1 bg-indigo-500 rounded w-24 mx-auto mb-6"></div>
+        
+        <!-- Quiz Question and Answers -->
+        <div id="quiz" class="space-y-4">
+            <h2 id="question" class="text-xl font-semibold text-gray-700">Question text goes here...</h2>
+            <div id="answer-buttons" class="grid grid-cols-1 gap-3">
+                <button class="answer-btn w-full text-left p-4 rounded-lg border-2 border-gray-200 bg-gray-50 hover:bg-indigo-100 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Answer 1</button>
+                <button class="answer-btn w-full text-left p-4 rounded-lg border-2 border-gray-200 bg-gray-50 hover:bg-indigo-100 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Answer 2</button>
+                <button class="answer-btn w-full text-left p-4 rounded-lg border-2 border-gray-200 bg-gray-50 hover:bg-indigo-100 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Answer 3</button>
+                <button class="answer-btn w-full text-left p-4 rounded-lg border-2 border-gray-200 bg-gray-50 hover:bg-indigo-100 hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Answer 4</button>
+            </div>
+            <button id="next-btn" class="next-btn w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:bg-gray-400 disabled:cursor-not-allowed mt-6">Next</button>
+        </div>
+
+        <!-- Score Display -->
+        <div id="score-container" class="hidden text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Quiz Completed!</h2>
+            <p id="score-text" class="text-lg text-gray-600 mb-6">You scored 0 out of 0.</p>
+            <button id="restart-btn" class="bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
