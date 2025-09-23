@@ -1,0 +1,103 @@
+/* Music Player styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+}
+* { margin:0; padding:0; box-sizing:border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.player {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.album-art-container {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.album-art-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.album-art-container.playing img {
+    transform: rotate(360deg);
+}
+
+.song-info h2 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.song-info p {
+    color: #ddd;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.progress-container {
+    width: 100%;
+    background: rgba(255,255,255,0.3);
+    height: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.progress {
+    background: #fff;
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+}
+
+.audio-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.audio-controls button {
+    background: rgba(255,255,255,0.25);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.audio-controls button:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.1);
+}
