@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game 🐍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Slippery Serpent</h1>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="game-over-message">Game Over!</div>
+        <div class="game-info">
+            <p class="score-display">Score: <span id="score">0</span></p>
+            <button id="start-button">Start Game</button>
+        </div>
+    </div>
+    <div class="controls">
+        <p>Use Arrow Keys to play!</p>
+    </div>
+    <div class="mobile-controls">
+        <button class="control-button up" data-direction="up">⬆️</button>
+        <button class="control-button down" data-direction="down">⬇️</button>
+        <button class="control-button left" data-direction="left">⬅️</button>
+        <button class="control-button right" data-direction="right">➡️</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
