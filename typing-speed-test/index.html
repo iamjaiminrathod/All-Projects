@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 p-4">
+
+    <div class="container flex flex-col items-center">
+        <div class="bg-white p-6 md:p-10 rounded-3xl shadow-2xl w-full">
+            <h1 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6">Typing Speed Test</h1>
+            
+            <!-- Text Display Area -->
+            <div id="text-display" class="relative text-gray-600 bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-inner mb-6 text-xl leading-relaxed overflow-y-auto max-h-48 transition-all duration-300 ease-in-out select-none">
+                <span class="text-gray-400">Click "Start Test" to begin...</span>
+            </div>
+
+            <!-- Input and Stats Area -->
+            <div class="space-y-6">
+                <div class="relative">
+                    <textarea id="input-area"
+                              class="w-full h-32 md:h-28 text-2xl p-4 rounded-xl border-4 border-gray-300 focus:outline-none focus:border-blue-500 disabled:bg-gray-200 transition-colors duration-200 resize-none"
+                              placeholder="Type the text here..."
+                              disabled></textarea>
+                </div>
+
+                <!-- Stats Display -->
+                <div id="stats" class="flex flex-col sm:flex-row justify-center sm:space-x-8 text-center sm:text-left transition-opacity duration-300 opacity-0 hidden">
+                    <div class="flex flex-col items-center space-y-2 mb-4 sm:mb-0">
+                        <span class="text-gray-500">WPM</span>
+                        <span id="wpm" class="text-4xl font-bold text-blue-600">0</span>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2 mb-4 sm:mb-0">
+                        <span class="text-gray-500">Accuracy</span>
+                        <span id="accuracy" class="text-4xl font-bold text-green-600">0%</span>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <span class="text-gray-500">Time</span>
+                        <span id="timer" class="text-4xl font-bold text-gray-800">0s</span>
+                    </div>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="flex justify-center mt-6 space-x-4">
+                    <button id="start-btn"
+                            class="py-3 px-8 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105">
+                        Start Test
+                    </button>
+                    <button id="reset-btn"
+                            class="py-3 px-8 bg-red-500 text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition-colors duration-200 transform hover:scale-105 hidden">
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

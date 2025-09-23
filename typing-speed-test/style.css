@@ -1,0 +1,31 @@
+ body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+            padding: 1.5rem;
+        }
+        #text-display::-webkit-scrollbar,
+        #input-area::-webkit-scrollbar {
+            width: 8px;
+        }
+        #text-display::-webkit-scrollbar-track,
+        #input-area::-webkit-scrollbar-track {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        #text-display::-webkit-scrollbar-thumb,
+        #input-area::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 10px;
+        }
+        #text-display::-webkit-scrollbar-thumb:hover,
+        #input-area::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
